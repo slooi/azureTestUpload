@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			canvas {
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas></canvas>
+		<script>
+			var canvas = document.getElementsByTagName("canvas")[0];
+			var context = canvas.getContext("2d");
+
+			var player = { x: 0, y: 0 };
+
+			window.addEventListener("keydown", function (event) {
+				// Handle key presses
+				if (event.key === "w") {
+					player.y = player.y - 5;
+				}
+				if (event.key === "s") {
+					player.y = player.y + 5;
+				}
+
+				// Clear the screen of previous render
+				context.clearRect(0, 0, 500, 500);
+				context.fillRect(20, player.y, 50, 50); // Render player
+			});
+		</script>
+	</body>
+</html>
