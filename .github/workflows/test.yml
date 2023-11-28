@@ -16,3 +16,5 @@ jobs:
         run: echo asd
       - name: npm i
         run: npm i
+      - name: run tets
+        run: npm run test
