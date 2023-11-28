@@ -4,5 +4,5 @@ import express from "express"
 export const app = express()
 
 app.get("/",(req,res)=>{
-	res.send("hi")
+	res.send("<h1>Hello :)</h1>")
 })
