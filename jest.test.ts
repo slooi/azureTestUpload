@@ -6,7 +6,6 @@ describe("Setting basic routes",()=>{
 		request(app)
 			.get("/")
 			.then(res=>{
-				console.log(res)
 				expect(res.text).toBe("hi")
 			})
 	})
