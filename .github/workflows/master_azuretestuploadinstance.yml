@@ -57,6 +57,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'azureTestUpload3'
-          slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5449EE06DC3B490E9E51E89B7D98A40B }}
+          publish-profile: ${{ secrets.AZURE_PUBLISH_SECRET }}
           package: .
